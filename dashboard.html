@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My listings — Campus Market</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+        Campus Market
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Browse</a>
+        <a href="sell.html">Sell</a>
+        <a href="dashboard.html" class="active">My books</a>
+      </nav>
+      <div class="nav-right">
+        <div id="nav-auth" style="display:flex;gap:10px;align-items:center"></div>
+        <button class="nav-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+      <div class="section-head page-head">
+        <div>
+          <h1>My books</h1>
+          <p>Your classifieds — everything you've posted, plus what you've saved.</p>
+        </div>
+        <a class="btn btn-primary" href="sell.html">+ Sell another book</a>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="mine">Selling</button>
+        <button class="tab" data-tab="saved">Saved</button>
+      </div>
+
+      <div id="dash-body"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>Campus Market — don't bin it, pass it on.</span>
+    <span>&copy; <span id="year"></span></span>
+  </footer>
+
+  <script src="js/seed.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

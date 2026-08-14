@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sell a book — Campus Market</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+        Campus Market
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Browse</a>
+        <a href="sell.html" class="active">Sell</a>
+        <a href="dashboard.html">My books</a>
+      </nav>
+      <div class="nav-right">
+        <div id="nav-auth" style="display:flex;gap:10px;align-items:center"></div>
+        <button class="nav-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap" style="max-width:820px">
+      <div class="page-head">
+        <h1 id="sell-title">Sell a book</h1>
+        <p id="sell-sub">Done with it? Let someone else use it.</p>
+      </div>
+
+      <div class="panel">
+        <div class="form-step"><span class="num">01</span> The book</div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="title">Book title</label>
+            <input id="title" type="text" placeholder="Data Structures and Algorithms in C++">
+            <div class="err">Add the book title.</div>
+          </div>
+          <div class="field">
+            <label for="author">Author</label>
+            <input id="author" type="text" placeholder="Adam Drozdek">
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" placeholder="Computer Science" list="subject-list">
+            <datalist id="subject-list">
+              <option>Computer Science</option><option>Mathematics</option>
+              <option>Electronics</option><option>Mechanical</option>
+              <option>Management</option><option>Physics</option>
+            </datalist>
+            <div class="err">Add a subject.</div>
+          </div>
+          <div class="field">
+            <label for="edition">Edition</label>
+            <input id="edition" type="text" placeholder="4th Edition, 2021">
+          </div>
+        </div>
+
+        <div class="form-step s2"><span class="num">02</span> The deal</div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="price">Price (₹)</label>
+            <input id="price" type="number" min="1" step="1" placeholder="450">
+            <div class="err">Enter a price above ₹0.</div>
+          </div>
+          <div class="field">
+            <label for="condition">Condition</label>
+            <select id="condition">
+              <option value="">Choose a condition</option>
+              <option>Like New</option>
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Fair</option>
+            </select>
+            <div class="err">Choose a condition.</div>
+          </div>
+
+        </div>
+
+        <div class="form-step s3"><span class="num">03</span> The story</div>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="tags">Tags</label>
+            <input id="tags" type="text" placeholder="DSA, Algorithms, CSE, BTech, Semester 3">
+            <div class="hint">Comma separated. Tags drive the search matching, so add the shorthand your batch actually uses.</div>
+          </div>
+
+          <div class="field full">
+            <div class="label-row">
+              <label for="description">Description</label>
+              <button class="btn btn-soft btn-sm" id="generate-btn" type="button">
+                ✦ Generate description
+              </button>
+            </div>
+            <textarea id="description" placeholder="Describe the condition, what's covered, and anything a buyer should know."></textarea>
+            <div class="hint">Generated text is fully editable — make it sound like you.</div>
+            <div class="err">Write at least a line or two.</div>
+          </div>
+
+          <div class="field full">
+            <label for="image">Cover photo (optional)</label>
+            <input id="image" type="file" accept="image/*">
+            <div class="hint" id="image-hint">JPG or PNG up to 5 MB. Without one, a clean cover card is generated automatically.</div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" id="publish-btn" type="button">Publish listing</button>
+          <a class="btn btn-ghost" href="dashboard.html">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>Campus Market — don't bin it, pass it on.</span>
+    <span>&copy; <span id="year"></span></span>
+  </footer>
+
+  <script src="js/seed.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/sell.js"></script>
+</body>
+</html>

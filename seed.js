@@ -1,0 +1,287 @@
+/* ============================================================
+   seed.js — inline copy of data/books.json
+   ------------------------------------------------------------
+   The app loads data/books.json over HTTP. Browsers block that
+   fetch when the page is opened straight from disk (file://),
+   so this identical copy keeps the demo alive in that case.
+   Edit data/books.json; regenerate this file only if you must.
+   ============================================================ */
+
+window.SEED_DATA = {
+  "sellers": [
+    {
+      "id": "u-demo",
+      "full_name": "Akshat Sharma",
+      "email": "demo@campus.market",
+      "password": "demo1234"
+    },
+    {
+      "id": "u-riya",
+      "full_name": "Riya Verma",
+      "email": "riya@campus.market",
+      "password": "riya1234"
+    },
+    {
+      "id": "u-kabir",
+      "full_name": "Kabir Nair",
+      "email": "kabir@campus.market",
+      "password": "kabir1234"
+    },
+    {
+      "id": "u-meera",
+      "full_name": "Meera Iyer",
+      "email": "meera@campus.market",
+      "password": "meera1234"
+    }
+  ],
+  "listings": [
+    {
+      "id": "bk-01",
+      "seller_id": "u-demo",
+      "title": "Data Structures and Algorithms in C++",
+      "author": "Adam Drozdek",
+      "subject": "Computer Science",
+      "edition": "4th Edition",
+      "price": 450,
+      "condition": "Excellent",
+      "description": "Well-maintained Data Structures and Algorithms textbook, ideal for CSE students preparing for semester exams. Minimal markings, tight binding, and full coverage of arrays, linked lists, trees and graphs.",
+      "tags": [
+        "DSA",
+        "Algorithms",
+        "CSE",
+        "BTech",
+        "Semester 3"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 2
+    },
+    {
+      "id": "bk-02",
+      "seller_id": "u-riya",
+      "title": "Operating System Concepts",
+      "author": "Silberschatz, Galvin",
+      "subject": "Computer Science",
+      "edition": "10th Edition",
+      "price": 600,
+      "condition": "Like New",
+      "description": "Barely used copy of the classic operating systems text. Covers processes, scheduling, deadlocks, memory management and file systems. No highlighting anywhere.",
+      "tags": [
+        "OS",
+        "Operating Systems",
+        "CSE",
+        "Semester 4"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 4
+    },
+    {
+      "id": "bk-03",
+      "seller_id": "u-kabir",
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "subject": "Computer Science",
+      "edition": "5th Edition",
+      "price": 520,
+      "condition": "Good",
+      "description": "Standard networking textbook used across the CSE syllabus. Light highlighting in the transport layer chapters, otherwise clean. Covers OSI, TCP/IP, routing and network security.",
+      "tags": [
+        "CN",
+        "Networks",
+        "Networking",
+        "CSE",
+        "Semester 5"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 5
+    },
+    {
+      "id": "bk-04",
+      "seller_id": "u-meera",
+      "title": "Database System Concepts",
+      "author": "Korth, Sudarshan",
+      "subject": "Computer Science",
+      "edition": "7th Edition",
+      "price": 550,
+      "condition": "Excellent",
+      "description": "Complete DBMS reference with SQL, normalisation, indexing and transaction management. Great for both semester exams and placement prep.",
+      "tags": [
+        "DBMS",
+        "SQL",
+        "Database",
+        "CSE",
+        "Semester 4"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 6
+    },
+    {
+      "id": "bk-05",
+      "seller_id": "u-riya",
+      "title": "Machine Learning",
+      "author": "Tom M. Mitchell",
+      "subject": "Computer Science",
+      "edition": "1st Edition",
+      "price": 750,
+      "condition": "Good",
+      "description": "Foundational machine learning text covering decision trees, neural networks, Bayesian learning and reinforcement learning. Some pencil notes in the margins.",
+      "tags": [
+        "ML",
+        "Machine Learning",
+        "AI",
+        "CSE",
+        "Elective"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 8
+    },
+    {
+      "id": "bk-06",
+      "seller_id": "u-kabir",
+      "title": "Artificial Intelligence: A Modern Approach",
+      "author": "Russell & Norvig",
+      "subject": "Computer Science",
+      "edition": "3rd Edition",
+      "price": 900,
+      "condition": "Excellent",
+      "description": "The standard AI textbook. Search, knowledge representation, planning, probabilistic reasoning and learning, all in near-perfect condition.",
+      "tags": [
+        "AI",
+        "Artificial Intelligence",
+        "CSE",
+        "Elective"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 9
+    },
+    {
+      "id": "bk-07",
+      "seller_id": "u-demo",
+      "title": "Higher Engineering Mathematics",
+      "author": "B.S. Grewal",
+      "subject": "Mathematics",
+      "edition": "44th Edition",
+      "price": 350,
+      "condition": "Good",
+      "description": "The engineering mathematics book every first year needs. Calculus, differential equations, linear algebra and transforms with hundreds of solved problems.",
+      "tags": [
+        "Maths",
+        "Mathematics",
+        "Engineering",
+        "Semester 1",
+        "Semester 2"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 11
+    },
+    {
+      "id": "bk-08",
+      "seller_id": "u-meera",
+      "title": "Java: The Complete Reference",
+      "author": "Herbert Schildt",
+      "subject": "Computer Science",
+      "edition": "12th Edition",
+      "price": 480,
+      "condition": "Like New",
+      "description": "Practically untouched copy. Full Java language reference plus collections, threads, JDBC and Swing. Ideal for OOPs coursework and interview prep.",
+      "tags": [
+        "Java",
+        "OOPs",
+        "Programming",
+        "CSE",
+        "Semester 3"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 12
+    },
+    {
+      "id": "bk-09",
+      "seller_id": "u-riya",
+      "title": "Web Development with HTML, CSS and JavaScript",
+      "author": "Jon Duckett",
+      "subject": "Computer Science",
+      "edition": "2nd Edition",
+      "price": 400,
+      "condition": "Excellent",
+      "description": "Beautifully illustrated front-end book. Clean pages, no markings. Covers HTML, CSS, responsive layout and modern JavaScript basics.",
+      "tags": [
+        "Web",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Frontend"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 14
+    },
+    {
+      "id": "bk-10",
+      "seller_id": "u-kabir",
+      "title": "Digital Design and Computer Architecture",
+      "author": "Harris & Harris",
+      "subject": "Electronics",
+      "edition": "2nd Edition",
+      "price": 620,
+      "condition": "Good",
+      "description": "Digital electronics and computer organisation in one book. Logic gates, combinational and sequential circuits, MIPS architecture and pipelining.",
+      "tags": [
+        "Digital Electronics",
+        "COA",
+        "ECE",
+        "Semester 3"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 16
+    },
+    {
+      "id": "bk-11",
+      "seller_id": "u-demo",
+      "title": "Introduction to Algorithms",
+      "author": "Cormen, Leiserson, Rivest, Stein",
+      "subject": "Computer Science",
+      "edition": "3rd Edition",
+      "price": 950,
+      "condition": "Excellent",
+      "description": "CLRS, the reference every placement aspirant keeps. Sorting, graph algorithms, dynamic programming and NP-completeness. Spine intact, no torn pages.",
+      "tags": [
+        "DSA",
+        "Algorithms",
+        "CLRS",
+        "Placement",
+        "CSE"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 18
+    },
+    {
+      "id": "bk-12",
+      "seller_id": "u-meera",
+      "title": "Engineering Physics",
+      "author": "H.K. Malik, A.K. Singh",
+      "subject": "Physics",
+      "edition": "2nd Edition",
+      "price": 250,
+      "condition": "Fair",
+      "description": "Used but complete first-year physics text. Some cover wear and notes in the margins, all pages present. Optics, quantum mechanics, lasers and semiconductors.",
+      "tags": [
+        "Physics",
+        "Engineering",
+        "Semester 1",
+        "BTech"
+      ],
+      "image_url": null,
+      "status": "available",
+      "days_ago": 21
+    }
+  ]
+};

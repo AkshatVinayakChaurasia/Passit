@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Market — buy and sell textbooks on campus</title>
+  <meta name="description" content="A peer-to-peer marketplace where students buy and sell used textbooks on campus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+        Campus Market
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Browse</a>
+        <a href="sell.html">Sell</a>
+        <a href="dashboard.html">My books</a>
+      </nav>
+      <div class="nav-right">
+        <div id="nav-auth" style="display:flex;gap:10px;align-items:center"></div>
+        <button class="nav-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">★ Campus classifieds, no.01</span>
+        <h1>Buy smart.<br><span class="accent">Sell faster.</span></h1>
+        <p class="lede">Find affordable textbooks from students on campus. Your seniors are done with them — you're not.</p>
+
+        <div class="searchbar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="search-input" type="search" placeholder="Search textbooks, subjects, authors..." aria-label="Search books">
+          <button class="btn btn-primary" id="search-btn">Search</button>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-soft" href="#results">Browse books</a>
+          <a class="btn btn-ghost" href="sell.html">Sell a book →</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>Student to student</strong><span>No middleman, no commission</span></div>
+          <div><strong>Smart matching</strong><span>Type “DSA”, get data structures</span></div>
+          <div><strong>Runs anywhere</strong><span>No backend, no keys, no setup</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <span class="sticker sticker-1">Good deal</span>
+        <img src="assets/logo.png" alt="Campus Market">
+        <span class="sticker sticker-2">Sell it →</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="section" id="results">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 id="results-heading" class="squiggle">Find your next book</h2>
+          <p>Listed by students on your campus.</p>
+        </div>
+        <div class="result-count" id="result-count"></div>
+      </div>
+
+      <div class="chips" id="chips">
+        <button class="chip" data-q="">All</button>
+        <button class="chip" data-q="DSA">DSA</button>
+        <button class="chip" data-q="AI ML">AI / ML</button>
+        <button class="chip" data-q="Networks">Networks</button>
+        <button class="chip" data-q="DBMS">DBMS</button>
+        <button class="chip" data-q="Maths">Maths</button>
+        <button class="chip" data-q="Programming">Programming</button>
+        <button class="chip" data-q="Electronics">Electronics</button>
+      </div>
+
+      <div class="filters">
+        <div class="field">
+          <label for="filter-subject">Subject</label>
+          <select id="filter-subject"><option value="">All subjects</option></select>
+        </div>
+        <div class="field">
+          <label for="filter-price">Price range</label>
+          <select id="filter-price">
+            <option value="">Any price</option>
+            <option value="0-300">Under ₹300</option>
+            <option value="300-600">₹300 – ₹600</option>
+            <option value="600-1000">₹600 – ₹1,000</option>
+            <option value="1000+">Over ₹1,000</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filter-condition">Condition</label>
+          <select id="filter-condition">
+            <option value="">Any condition</option>
+            <option>Like New</option>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Fair</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filter-sort">Sort by</label>
+          <select id="filter-sort">
+            <option value="relevance">Best match</option>
+            <option value="newest">Newest</option>
+            <option value="price-asc">Lowest price</option>
+            <option value="price-desc">Highest price</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid" id="listing-grid"></div>
+
+      <div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-ghost btn-sm" id="reset-filters">Clear filters</button>
+        <button class="btn btn-ghost btn-sm" id="reset-data" title="Restore the original mock data">
+          <i class="fa-solid fa-rotate-left"></i> Reset demo data
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>Campus Market — don't bin it, pass it on.</span>
+    <span>&copy; <span id="year"></span></span>
+  </footer>
+
+  <script src="js/seed.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/marketplace.js"></script>
+</body>
+</html>
